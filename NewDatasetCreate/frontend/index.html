@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服饰图像标注工具</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .main-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr 400px;
+            gap: 20px;
+        }
+        
+        .panel {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .panel-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        /* 图像列表 */
+        .image-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .image-item {
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .image-item:hover {
+            border-color: #667eea;
+            background: #f0f0ff;
+        }
+        
+        .image-item.active {
+            border-color: #667eea;
+            background: #e8e8ff;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+        
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+        }
+        
+        /* 图像展示区 */
+        .image-display-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .canvas-container {
+            position: relative;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background: #fafafa;
+            display: inline-block;
+        }
+        
+        canvas {
+            display: block;
+            cursor: crosshair;
+        }
+        
+        .preview-container {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 224px;
+        }
+        
+        .preview-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        /* 描述编辑区 */
+        .description-area {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .description-box {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .description-box label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .description-box textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 60px;
+        }
+        
+        .description-box textarea:read-only {
+            background: #f5f5f5;
+            cursor: not-allowed;
+        }
+        
+        .progress-info {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+        
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .success {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="header">
+                <h1>🎨 服饰图像人机结合标注工具</h1>
+                <div class="progress-info">
+                    已标注: {{ progress.annotated }}/{{ progress.total }} ({{ progress.percentage }}%)
+                </div>
+            </div>
+            
+            <div class="main-layout">
+                <!-- 左侧：图像列表 -->
+                <div class="panel">
+                    <div class="panel-title">图像列表</div>
+                    <div class="image-list">
+                        <div 
+                            v-for="img in images" 
+                            :key="img.path"
+                            :class="['image-item', { active: currentImage && currentImage.path === img.path }]"
+                            @click="loadImage(img)"
+                        >
+                            {{ img.name }}
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <button class="btn btn-secondary" @click="prevPage" :disabled="currentPage === 1">上一页</button>
+                        <span>第 {{ currentPage }}/{{ totalPages }} 页</span>
+                        <button class="btn btn-secondary" @click="nextPage" :disabled="currentPage === totalPages">下一页</button>
+                    </div>
+                </div>
+                
+                <!-- 中间：标注操作区 -->
+                <div class="panel">
+                    <div class="panel-title">标注操作区</div>
+                    <div class="image-display-area">
+                        <!-- 图像展示框 -->
+                        <div>
+                            <label style="display: block; margin-bottom: 10px; font-weight: bold;">图像展示（拖拽绘制选框）</label>
+                            <div class="canvas-container">
+                                <canvas 
+                                    ref="imageCanvas"
+                                    width="224" 
+                                    height="224"
+                                    @mousedown="startDraw"
+                                    @mousemove="draw"
+                                    @mouseup="endDraw"
+                                    @mouseleave="endDraw"
+                                ></canvas>
+                            </div>
+                        </div>
+                        
+                        <!-- 选框预览区 -->
+                        <div>
+                            <label style="display: block; margin-bottom: 10px; font-weight: bold;">选框预览（裁剪+填充）</label>
+                            <div class="preview-container">
+                                <img v-if="previewImageUrl" :src="previewImageUrl" alt="预览">
+                                <span v-else style="color: #999;">预览区</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 操作按钮 -->
+                        <div class="button-group">
+                            <button class="btn btn-primary" @click="confirmBox" :disabled="!boxCoords">确认选框</button>
+                            <button class="btn btn-secondary" @click="clearBox">清空选框</button>
+                            <button class="btn btn-primary" @click="generateSelfDesc" :disabled="!croppedImagePath || generatingSelf || useLmmAsFirstDesc">生成自研模型描述</button>
+                            <button class="btn btn-primary" @click="generateLmmDesc" :disabled="!currentImage || generatingLmm">生成{{ selectedLmm.toUpperCase() }}描述</button>
+                            <button class="btn btn-success" @click="saveAnnotation" :disabled="!canSave">保存标注</button>
+                            <button class="btn btn-secondary" @click="nextImage">下一张</button>
+                        </div>
+                        
+                        <div v-if="message" :class="messageType">
+                            {{ message }}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧：描述编辑区 -->
+                <div class="panel">
+                    <div class="panel-title">描述编辑区</div>
+                    <div class="description-area">
+                        <!-- 设置区域 -->
+                        <div style="background: #f0f0f0; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; gap: 10px;">
+                                    <input type="checkbox" v-model="useLmmAsFirstDesc" style="width: auto;">
+                                    <span style="font-weight: bold;">第一个描述使用LMM</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">LMM类型:</label>
+                                <select v-model="selectedLmm" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <option value="qwen">QWEN (默认)</option>
+                                    <option value="doubao">Doubao</option>
+                                    <option value="kimi">Kimi</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="description-box">
+                            <label>{{ useLmmAsFirstDesc ? 'LMMs服饰描述（第一个描述，可编辑）' : '自研模型描述（第一个描述，只读）' }}</label>
+                            <textarea v-model="firstDesc" :readonly="!useLmmAsFirstDesc"></textarea>
+                        </div>
+                        
+                        <div class="description-box">
+                            <label>LMMs服饰描述（可编辑）</label>
+                            <textarea v-model="lmmClothingDesc"></textarea>
+                        </div>
+                        
+                        <div class="description-box">
+                            <label>LMMs背景描述1（可编辑）</label>
+                            <textarea v-model="lmmBg1Desc"></textarea>
+                        </div>
+                        
+                        <div class="description-box">
+                            <label>LMMs背景描述2（可编辑）</label>
+                            <textarea v-model="lmmBg2Desc"></textarea>
+                        </div>
+                        
+                        <button class="btn btn-success" @click="exportDataset" style="width: 100%; margin-top: 10px;">导出数据集</button>
+                        <button class="btn btn-primary" @click="batchGenerateAll" :disabled="batchGenerating" style="width: 100%; margin-top: 10px;">
+                            {{ batchGenerating ? `批量生成中... (${batchProgress.current}/${batchProgress.total})` : '一键生成所有图像描述' }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 检查Vue是否加载
+        if (typeof Vue === 'undefined') {
+            console.error('Vue库未加载！请检查网络连接或CDN链接。');
+            document.body.innerHTML = '<div style="padding: 20px; color: red;">错误：Vue库未加载，请检查网络连接。</div>';
+        }
+        
+        // 检查Axios是否加载
+        if (typeof axios === 'undefined') {
+            console.error('Axios库未加载！请检查网络连接或CDN链接。');
+        }
+        
+        const { createApp } = Vue;
+        
+        const app = createApp({
+            data() {
+                return {
+                    images: [],
+                    currentPage: 1,
+                    totalPages: 1,
+                    currentImage: null,
+                    imageCanvas: null,
+                    ctx: null,
+                    imageObj: null,
+                    scale: 1,
+                    
+                    // 选框相关
+                    isDrawing: false,
+                    startX: 0,
+                    startY: 0,
+                    boxCoords: null,
+                    boxRect: null,
+                    
+                    // 预览
+                    previewImageUrl: null,
+                    croppedImagePath: null,
+                    
+                    // 描述
+                    selfDesc: '',
+                    lmmClothingDesc: '',
+                    lmmBg1Desc: '',
+                    lmmBg2Desc: '',
+                    
+                    // 设置
+                    useLmmAsFirstDesc: false,  // 第一个描述是否使用LMM
+                    selectedLmm: 'qwen',  // 选择的LMM类型
+                    
+                    // 状态
+                    generatingSelf: false,
+                    generatingLmm: false,
+                    batchGenerating: false,
+                    message: '',
+                    messageType: '',
+                    
+                    // 进度
+                    progress: {
+                        annotated: 0,
+                        total: 0,
+                        percentage: 0
+                    },
+                    
+                    // 批量生成进度
+                    batchProgress: {
+                        current: 0,
+                        total: 0
+                    }
+                }
+            },
+            computed: {
+                canSave() {
+                    // 根据useLmmAsFirstDesc判断第一个描述是否存在
+                    const firstDescExists = this.useLmmAsFirstDesc ? this.lmmClothingDesc : this.selfDesc;
+                    return this.boxCoords && firstDescExists && this.currentImage;
+                },
+                firstDesc: {
+                    get() {
+                        return this.useLmmAsFirstDesc ? this.lmmClothingDesc : this.selfDesc;
+                    },
+                    set(value) {
+                        if (this.useLmmAsFirstDesc) {
+                            this.lmmClothingDesc = value;
+                        } else {
+                            this.selfDesc = value;
+                        }
+                    }
+                }
+            },
+            mounted() {
+                this.imageCanvas = this.$refs.imageCanvas;
+                this.ctx = this.imageCanvas.getContext('2d');
+                this.loadImageList();
+                this.updateProgress();
+            },
+            methods: {
+                async loadImageList() {
+                    try {
+                        const response = await axios.get('/api/images/list', {
+                            params: { page: this.currentPage, per_page: 10 }
+                        });
+                        this.images = response.data.images;
+                        this.totalPages = response.data.total_pages;
+                        this.progress.total = response.data.total;
+                    } catch (error) {
+                        this.showMessage('加载图像列表失败: ' + error.message, 'error');
+                    }
+                },
+                
+                async loadImage(img) {
+                    try {
+                        this.currentImage = img;
+                        this.clearBox();
+                        this.clearDescriptions();
+                        
+                        // 加载图像
+                        this.imageObj = new Image();
+                        this.imageObj.crossOrigin = 'anonymous';
+                        this.imageObj.onload = () => {
+                            // 计算缩放比例
+                            const canvasWidth = 224;
+                            const canvasHeight = 224;
+                            const imgWidth = this.imageObj.width;
+                            const imgHeight = this.imageObj.height;
+                            
+                            this.scale = Math.min(canvasWidth / imgWidth, canvasHeight / imgHeight);
+                            
+                            // 绘制图像
+                            this.ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                            const drawWidth = imgWidth * this.scale;
+                            const drawHeight = imgHeight * this.scale;
+                            const offsetX = (canvasWidth - drawWidth) / 2;
+                            const offsetY = (canvasHeight - drawHeight) / 2;
+                            
+                            this.ctx.drawImage(this.imageObj, offsetX, offsetY, drawWidth, drawHeight);
+                        };
+                        this.imageObj.src = `/api/images/file?path=${img.name}`;
+                        
+                    } catch (error) {
+                        this.showMessage('加载图像失败: ' + error.message, 'error');
+                    }
+                },
+                
+                startDraw(e) {
+                    if (!this.imageObj) return;
+                    
+                    this.isDrawing = true;
+                    const rect = this.imageCanvas.getBoundingClientRect();
+                    this.startX = e.clientX - rect.left;
+                    this.startY = e.clientY - rect.top;
+                },
+                
+                draw(e) {
+                    if (!this.isDrawing || !this.imageObj) return;
+                    
+                    const rect = this.imageCanvas.getBoundingClientRect();
+                    const currentX = e.clientX - rect.left;
+                    const currentY = e.clientY - rect.top;
+                    
+                    // 重绘图像
+                    this.ctx.clearRect(0, 0, 224, 224);
+                    const drawWidth = this.imageObj.width * this.scale;
+                    const drawHeight = this.imageObj.height * this.scale;
+                    const offsetX = (224 - drawWidth) / 2;
+                    const offsetY = (224 - drawHeight) / 2;
+                    this.ctx.drawImage(this.imageObj, offsetX, offsetY, drawWidth, drawHeight);
+                    
+                    // 绘制选框
+                    const x1 = Math.max(0, Math.min(this.startX, currentX));
+                    const y1 = Math.max(0, Math.min(this.startY, currentY));
+                    const x2 = Math.min(224, Math.max(this.startX, currentX));
+                    const y2 = Math.min(224, Math.max(this.startY, currentY));
+                    
+                    this.ctx.strokeStyle = '#00FF00';
+                    this.ctx.lineWidth = 2;
+                    this.ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+                },
+                
+                endDraw(e) {
+                    if (!this.isDrawing) return;
+                    
+                    this.isDrawing = false;
+                    const rect = this.imageCanvas.getBoundingClientRect();
+                    const endX = e.clientX - rect.left;
+                    const endY = e.clientY - rect.top;
+                    
+                    // 计算选框坐标（相对于原始图像）
+                    const x1 = Math.max(0, Math.min(this.startX, endX));
+                    const y1 = Math.max(0, Math.min(this.startY, endY));
+                    const x2 = Math.min(224, Math.max(this.startX, endX));
+                    const y2 = Math.min(224, Math.max(this.startY, endY));
+                    
+                    if (x2 - x1 < 10 || y2 - y1 < 10) {
+                        this.showMessage('选框太小，请重新绘制', 'error');
+                        this.clearBox();
+                        return;
+                    }
+                    
+                    // 转换为原始图像坐标
+                    const imgWidth = this.imageObj.width;
+                    const imgHeight = this.imageObj.height;
+                    const drawWidth = imgWidth * this.scale;
+                    const drawHeight = imgHeight * this.scale;
+                    const offsetX = (224 - drawWidth) / 2;
+                    const offsetY = (224 - drawHeight) / 2;
+                    
+                    const origX1 = Math.max(0, Math.floor((x1 - offsetX) / this.scale));
+                    const origY1 = Math.max(0, Math.floor((y1 - offsetY) / this.scale));
+                    const origX2 = Math.min(imgWidth, Math.ceil((x2 - offsetX) / this.scale));
+                    const origY2 = Math.min(imgHeight, Math.ceil((y2 - offsetY) / this.scale));
+                    
+                    this.boxCoords = [origX1, origY1, origX2, origY2];
+                },
+                
+                async confirmBox() {
+                    if (!this.boxCoords || !this.currentImage) {
+                        this.showMessage('请先绘制选框', 'error');
+                        return;
+                    }
+                    
+                    try {
+                        const response = await axios.post('/api/annotation/crop', {
+                            image_path: this.currentImage.path,
+                            box_coords: this.boxCoords
+                        });
+                        
+                        if (response.data.success) {
+                            this.croppedImagePath = response.data.cropped_path;
+                            this.previewImageUrl = response.data.cropped_url;
+                            this.showMessage('选框已确认', 'success');
+                        }
+                    } catch (error) {
+                        this.showMessage('确认选框失败: ' + (error.response?.data?.error || error.message), 'error');
+                    }
+                },
+                
+                clearBox() {
+                    this.boxCoords = null;
+                    this.previewImageUrl = null;
+                    this.croppedImagePath = null;
+                    
+                    if (this.imageObj) {
+                        this.ctx.clearRect(0, 0, 224, 224);
+                        const drawWidth = this.imageObj.width * this.scale;
+                        const drawHeight = this.imageObj.height * this.scale;
+                        const offsetX = (224 - drawWidth) / 2;
+                        const offsetY = (224 - drawHeight) / 2;
+                        this.ctx.drawImage(this.imageObj, offsetX, offsetY, drawWidth, drawHeight);
+                    }
+                },
+                
+                async generateSelfDesc() {
+                    if (!this.croppedImagePath) {
+                        this.showMessage('请先确认选框', 'error');
+                        return;
+                    }
+                    
+                    this.generatingSelf = true;
+                    this.showMessage('正在生成自研模型描述...', '');
+                    
+                    try {
+                        const response = await axios.post('/api/model/self/generate', {
+                            cropped_image_path: this.croppedImagePath
+                        });
+                        
+                        if (response.data.success) {
+                            this.selfDesc = response.data.description;
+                            this.showMessage('自研模型描述生成成功', 'success');
+                        }
+                    } catch (error) {
+                        this.showMessage('生成自研模型描述失败: ' + (error.response?.data?.error || error.message), 'error');
+                    } finally {
+                        this.generatingSelf = false;
+                    }
+                },
+                
+                async generateLmmDesc() {
+                    if (!this.currentImage) {
+                        this.showMessage('请先加载图像', 'error');
+                        return;
+                    }
+                    
+                    this.generatingLmm = true;
+                    this.showMessage(`正在生成${this.selectedLmm.toUpperCase()}描述...`, '');
+                    
+                    try {
+                        const response = await axios.post('/api/model/lmm/generate', {
+                            full_image_path: this.currentImage.path,
+                            lmm_name: this.selectedLmm
+                        });
+                        
+                        if (response.data.success) {
+                            this.lmmClothingDesc = response.data.clothing_desc;
+                            this.lmmBg1Desc = response.data.bg1_desc;
+                            this.lmmBg2Desc = response.data.bg2_desc;
+                            this.showMessage('LMMs描述生成成功', 'success');
+                        }
+                    } catch (error) {
+                        this.showMessage('生成LMMs描述失败: ' + (error.response?.data?.error || error.message), 'error');
+                    } finally {
+                        this.generatingLmm = false;
+                    }
+                },
+                
+                clearDescriptions() {
+                    this.selfDesc = '';
+                    this.lmmClothingDesc = '';
+                    this.lmmBg1Desc = '';
+                    this.lmmBg2Desc = '';
+                },
+                
+                async saveAnnotation() {
+                    // 根据useLmmAsFirstDesc决定第一个描述
+                    const firstDesc = this.useLmmAsFirstDesc ? this.lmmClothingDesc : this.selfDesc;
+                    
+                    if (!this.currentImage || !this.boxCoords || !firstDesc) {
+                        this.showMessage('缺少必要信息，无法保存', 'error');
+                        return;
+                    }
+                    
+                    try {
+                        const response = await axios.post('/api/annotation/save', {
+                            image_path: this.currentImage.path,
+                            box_coords: this.boxCoords,
+                            self_desc: this.selfDesc,
+                            lmm_clothing_desc: this.lmmClothingDesc,
+                            lmm_bg1: this.lmmBg1Desc,
+                            lmm_bg2: this.lmmBg2Desc,
+                            use_lmm_as_first: this.useLmmAsFirstDesc
+                        });
+                        
+                        if (response.data.success) {
+                            this.showMessage('标注已保存', 'success');
+                            this.updateProgress();
+                        }
+                    } catch (error) {
+                        this.showMessage('保存标注失败: ' + (error.response?.data?.error || error.message), 'error');
+                    }
+                },
+                
+                async batchGenerateAll() {
+                    if (this.batchGenerating) {
+                        this.showMessage('批量生成正在进行中...', '');
+                        return;
+                    }
+                    
+                    if (!confirm('确定要批量生成所有图像的描述吗？这可能需要较长时间。')) {
+                        return;
+                    }
+                    
+                    this.batchGenerating = true;
+                    this.batchProgress = { current: 0, total: this.progress.total };
+                    this.showMessage('开始批量生成...', '');
+                    
+                    try {
+                        const response = await axios.post('/api/batch/generate', {
+                            lmm_name: this.selectedLmm,
+                            use_lmm_as_first: this.useLmmAsFirstDesc
+                        });
+                        
+                        if (response.data.success) {
+                            this.showMessage(`批量生成完成！成功: ${response.data.success_count}, 失败: ${response.data.fail_count}`, 'success');
+                            this.updateProgress();
+                        }
+                    } catch (error) {
+                        this.showMessage('批量生成失败: ' + (error.response?.data?.error || error.message), 'error');
+                    } finally {
+                        this.batchGenerating = false;
+                        this.batchProgress = { current: 0, total: 0 };
+                    }
+                },
+                
+                nextImage() {
+                    const currentIdx = this.images.findIndex(img => 
+                        this.currentImage && img.path === this.currentImage.path
+                    );
+                    
+                    if (currentIdx >= 0 && currentIdx < this.images.length - 1) {
+                        this.loadImage(this.images[currentIdx + 1]);
+                    } else if (this.currentPage < this.totalPages) {
+                        this.currentPage++;
+                        this.loadImageList().then(() => {
+                            if (this.images.length > 0) {
+                                this.loadImage(this.images[0]);
+                            }
+                        });
+                    } else {
+                        this.showMessage('已经是最后一张图像', '');
+                    }
+                },
+                
+                async updateProgress() {
+                    try {
+                        const response = await axios.get('/api/annotation/progress');
+                        this.progress = response.data;
+                    } catch (error) {
+                        console.error('获取进度失败:', error);
+                    }
+                },
+                
+                async exportDataset() {
+                    try {
+                        const response = await axios.post('/api/annotation/export', {}, {
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        });
+                        if (response.data.success) {
+                            this.showMessage(`数据集已导出到: ${response.data.output_path}`, 'success');
+                        }
+                    } catch (error) {
+                        this.showMessage('导出数据集失败: ' + (error.response?.data?.error || error.message), 'error');
+                    }
+                },
+                
+                prevPage() {
+                    if (this.currentPage > 1) {
+                        this.currentPage--;
+                        this.loadImageList();
+                    }
+                },
+                
+                nextPage() {
+                    if (this.currentPage < this.totalPages) {
+                        this.currentPage++;
+                        this.loadImageList();
+                    }
+                },
+                
+                showMessage(msg, type) {
+                    this.message = msg;
+                    this.messageType = type;
+                    if (type === 'success' || type === 'error') {
+                        setTimeout(() => {
+                            this.message = '';
+                            this.messageType = '';
+                        }, 3000);
+                    }
+                }
+            },
+            watch: {
+                useLmmAsFirstDesc(newVal) {
+                    // 切换时，如果当前有描述，可以交换显示
+                    if (newVal && this.selfDesc && !this.lmmClothingDesc) {
+                        // 切换到LMM，但LMM描述为空，提示用户生成
+                        this.showMessage('请先生成LMM描述', '');
+                    }
+                }
+            }
+        });
+        
+        // 挂载Vue应用
+        try {
+            app.mount('#app');
+            console.log('Vue应用已成功挂载');
+        } catch (error) {
+            console.error('Vue应用挂载失败:', error);
+            document.body.innerHTML = '<div style="padding: 20px; color: red;">错误：Vue应用挂载失败。请检查控制台获取详细信息。</div>';
+        }
+    </script>
+</body>
+</html>
+

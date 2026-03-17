@@ -1,0 +1,100 @@
+001	solid color white cotton long sleeve shirt
+002	White solid chiffon long-sleeve blouse and blue distressed denim jeans
+003	casual long sleeve blouse lightweight fabric blue and white intricate pattern
+004	solid green bomber jacket long sleeves polyester material with white collar trim
+005	Crewneck sweatshirt long sleeves cotton circular pattern black solid jogger pants
+006	Short sleeve cotton t-shirt with floral pattern and NY letter print
+007	Sleeveless solid coral cotton cropped tank top high waisted frayed solid blue denim shorts
+008	flowy blouse three quarter sleeves with lace trim lightweight floral print
+009	Solid white sleeveless tank top with fringe trim made of lightweight fabric
+010	Cotton black and white gingham tie-front short-sleeve shirt high-waisted black pants
+011	short sleeve cotton polo shirt with geometric pattern dark slim fit pants
+012	Solid beige mock neck long sleeve blouse made of lightweight flowy fabric
+013	sleeveless button-front plaid cotton shirt with chest pockets
+014	long sleeve solid satin blouse and solid suede mini skirt
+015	Solid pink flutter-sleeve soft blouse solid black high-waisted flared casual pants
+016	solid black bomber jacket long sleeves satin like material
+017	Casual blouse with flutter sleeves cotton material small dotted pattern
+018	Black three-quarter sleeve trim cardigan solid gray sleeveless tank top distressed blue denim shorts
+019	Long-sleeved solid black cotton button-down shirt and solid gray cotton casual pants
+020	Tank top sleeveless heathered cotton fabric
+021	Black backwards baseball cap white short sleeve cotton T shirt with small repeating patterns
+022	Sleeveless solid light turquoise blouse made of lightweight fabric
+023	Long-sleeve striped cotton button-up shirt and solid beige cotton casual pants
+024	Sleeveless patterned tank top with black fringe and solid black shorts
+025	Sleeveless faded gray denim vest with stud accents on collar and seams
+026	Solid color cotton tank top with sleeves cut off and a chest pocket
+027	solid color cotton short sleeve t-shirt
+028	sleeveless tank top with geometric pattern made of cotton
+029	Oversized shirt with rolled-up sleeves cotton material black and white vertical stripes
+030	solid cotton sleeveless tank top and light gray solid cotton casual pants
+031	solid white cotton tank top with sleeves cut off
+032	Solid blue loose-fit blouse with long sleeves made of cotton
+033	Spaghetti strap solid blue denim crop top and side-button solid mustard suede mini skirt.
+034	long sleeve cotton shirt with blue and white plaid pattern
+035	Cropped short-sleeve cotton paisley blouse and blue skinny jeans.
+036	cropped blouse cap sleeves lightweight fabric solid turquoise color
+037	Solid cream chiffon blouse with three-quarter sleeves and V-neck lace-up front
+038	White solid short-sleeve cotton t-shirt blue denim jeans blue cotton baseball cap
+039	hooded jacket long sleeves cotton material solid olive green color
+040	Long-sleeve solid pink lace top
+041	Black dress with elbow-length sleeves cotton material and vertical back decorative pattern
+042	Cropped off-the-shoulder lace top with spaghetti straps and floral pattern
+043	Blue-white floral blouse short ruffled sleeves black skinny solid pants cotton
+044	Long-sleeve shirt full sleeves solid color cotton jogger pants solid side stripes soft material
+045	solid navy long-sleeve cotton button-down shirt and gray striped casual shorts
+046	solid gray cotton sleeveless tank top
+047	Long-sleeved pinstripe suit jacket matching shorts red solid bow tie white sneakers
+048	Long-sleeve cotton sweatshirt with gray patterns on shoulders and lower section
+049	Solid blue denim spaghetti-strap crop top and mustard faux suede mini skirt
+050	sleeveless lace tank top with intricate pattern light blue solid denim shorts
+051	Solid black off-shoulder top with short sleeves made of lightweight fabric
+052	Solid black sleeveless tank top with lace trim made of cotton fabric
+053	Raglan shirt with 3/4 length sleeves cotton color-blocked pattern
+054	Denim jacket long sleeve denim solid flannel shirt long sleeve flannel plaid olive chino pants cotton solid leather work boots solid
+055	solid white longline t-shirt short sleeves cotton material
+056	Solid color cropped short-sleeve top and solid white shorts smooth fabric
+057	Solid yellow cotton short sleeve t-shirt and solid black pants
+058	Short sleeve collared cotton shirt with pink shark pattern on light blue
+059	Kimono-style short-sleeved blue floral outerwear white sleeveless solid tank top white ruffled shorts
+060	Black solid cotton tank top with cut-off sleeves and gray solid casual pants
+061	Cropped sleeveless solid black satin tank top and high-waisted ripped cotton jeans
+062	Sleeveless silk-like blouse solid white with black trim and solid black shorts
+063	White solid long-sleeve cotton shirt and black solid cotton jogger pants
+064	White spaghetti-strap lace tank top with intricate pattern and high-waisted blue jeans
+065	White solid short-sleeve cotton button-down shirt black skinny ripped jeans white sneakers
+066	Floral cotton sleeveless tank top with lace back yoke
+067	Short-sleeve striped cotton button-down shirt and solid beige cotton chino pants
+068	Solid color sleeveless tank top and solid color white pants
+069	Short-sleeve button-down shirt with rolled cuffs cotton fabric repeating small animal pattern
+070	Solid color cotton tank top with sleeves cut off
+071	Solid blue cotton blouse with three-quarter sleeves
+072	Long-sleeve button-down shirt solid maroon body black collar and placket cotton blend
+073	Solid white short-sleeved cotton polo shirt dark pants with striped waistband
+074	Sleeveless tank top lightweight fabric decorative neckline pattern dark solid jeans
+075	plaid button-down shirt rolled sleeves solid black tank top skinny ripped denim jeans
+076	Mandarin collar solid dark blue cotton long sleeve shirt and solid gray casual cotton pants
+077	Solid white casual short-sleeve top with rolled sleeves made of cotton
+078	Cotton tie-dye tunic top with wide long sleeves
+079	Solid black crop top with long sheer mesh sleeves
+080	Cold shoulder blouse with bell sleeves lightweight fabric solid color with eyelet trim
+081	Light yellow solid sleeveless chiffon tank top and blue denim shorts
+082	Halter top shorts set sleeveless lightweight fabric blue white floral pattern with tassel trim.
+083	raglan style color blocked shirt cotton raglan sleeves slim fit solid dark blue jeans cotton blend
+084	Short sleeve cotton t-shirt grey base with two white horizontal stripes
+085	Cropped spaghetti strap tank top solid yellow lightweight fabric white cotton ripped jeans
+086	Button-down shirt long sleeves flannel red black and white plaid light blue distressed jeans
+087	Short-sleeve button-down shirt cotton material tropical leaf pattern in blue white black
+088	Solid black loose three-quarter sleeve blouse and light wash frayed denim shorts
+089	gray short-sleeve solid cotton t-shirt and blue solid denim overalls
+090	solid colored beige long sleeve chiffon blouse and black faux leather shorts
+091	White three-quarter sleeve blouse solid body lace neckline black solid skinny pants
+092	sleeveless lightweight tank top solid dark green lace neckline white skinny jeans solid
+093	solid white short-sleeved button-down shirt lightweight fabric blue denim jeans
+094	Long-sleeve solid cotton sweater and solid denim jeans
+095	Sleeveless ribbed solid light pink top skinny dark gray pants fluffy off-white shearling coat black knee-high heeled boots
+096	Color-blocked long-sleeve cotton button-down shirt and solid white cotton shorts
+097	Long-sleeve cotton sweatshirt solid black with white yes logo blue cotton jogger pants solid color
+098	Sheer three-quarter sleeve top with floral embroidery over solid black tank
+099	Black halter sleeveless crop top with mesh panel white solid textured skirt
+100	Cropped sleeveless cotton tank top with red-white pattern and distressed denim shorts

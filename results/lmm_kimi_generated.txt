@@ -1,0 +1,100 @@
+001	White long-sleeved shirt with solid color, buttoned cuffs, cotton material, worn with dark jeans.
+002	White long-sleeved blouse with solid color, buttoned cuffs, and back pleat detail; paired with distressed blue jeans.
+003	Printed blouse with long sleeves, cut-off shoulders, lightweight fabric, blue and white pattern.
+004	Men's bomber jacket, solid green color, full sleeves, lightweight material.
+005	Men's crew neck sweatshirt with long sleeves, cotton material, grey color with red circular pattern, black pants with grey panels.
+006	Short-sleeved cotton t-shirt featuring floral pattern and graphic text, with sleeves cut off.
+007	Coral tank top with thin straps, light blue denim skirt with frayed hem, casual style, solid color.
+008	Floral print blouse with three-quarter sleeves, round neckline, lace trim, and casual fit.
+009	Tank top, cut off sleeves, white cotton, fringe detail, solid color.
+010	Gingham tie-front shirt with short sleeves and black high-waisted pants.
+011	Short-sleeved polo shirt with tribal pattern, black jeans, and black sneakers.
+012	Long-sleeved blouse with high neck, solid light beige color, smooth material, no pattern.
+013	Sleeveless button-up shirt, plaid pattern, likely cotton, collared, front pockets, paired with dark pants.
+014	Long-sleeve mini dress with solid color, scoop neckline, made from a soft fabric, paired with high-heeled ankle boots.
+015	Casual short-sleeved pink top with cut-off sleeves, black flared jeans, brown open-toe sandals.
+016	Black bomber jacket with zipper, long sleeves, ribbed cuffs, solid color, lightweight material.
+017	Short-sleeved white top with cut-off sleeves, textured fabric, and patterned design.
+018	Cotton grey tank top, denim skirt with cut-off sleeves, black and white striped jacket, brown platform sandals.
+019	Men's long-sleeved shirt, Mandarin collar, button-up front, solid color, casual fit, material not specified.
+020	Mens sleeveless tank top, solid maroon color, likely cotton material, casual style, no visible pattern.
+021	Short-sleeved t-shirt with small black pattern, cotton material, black fedora hat.
+022	Sleeveless mint green blouse, solid color, smooth material, round neckline, no visible pattern.
+023	Button-up shirt, solid color, long sleeves, collared, possibly cotton blend; khaki pants, solid color, straight fit.
+024	Printed tank top with cut-off sleeves, black denim skirt, strappy flat sandals.
+025	Sleeveless gray suede vest with studded embellishments and frayed hem.
+026	Casual sleeveless tank top, cotton material, solid pink color, pocket detail.
+027	Crew neck, short-sleeved, solid white cotton t-shirt with a relaxed fit.
+028	Strap top with cold-shoulder cutouts, geometric pattern, lightweight fabric, white jeans.
+029	Black and white striped dress, three-quarter sleeves, cut-off sleeves, loose fit, casual style.
+030	Men's navy blue tank top, sleeveless, solid color, lightweight fabric.
+031	White sleeveless tank top, solid color, cotton, no pattern, crew neck, armholes.
+032	Solid blue blouse with gathered elastic back, three-quarter sleeves, lightweight fabric, worn with light blue denim jeans.
+033	Strap crop top with button detail, solid blue color, sleeveless, paired with a mustard yellow button-up mini skirt, made of a solid fabric.
+034	Long-sleeved plaid shirt with button-down front, made from cotton, featuring blue and white checkered pattern.
+035	Short-sleeve crop top with paisley print, lightweight cotton blend material, casual style.
+036	Solid teal crop top with cut-off sleeves and flowy fabric.
+037	Solid color V-neck blouse with bell sleeves, made of lightweight fabric, paired with distressed denim jeans.
+038	White crew neck t-shirt, short sleeves, solid color, casual cotton material.
+039	Olive green jacket with long sleeves, hood, front zipper, and ribbed hem and cuffs.
+040	Lace long-sleeve top, solid color, fitted style, soft fabric.
+041	Mid-length black dress with three-quarter sleeves, embroidered floral detail on back, and cut-out shoulder design.
+042	Off-shoulder white top with cut-off sleeves, lace detailing, and zipper at back.
+043	Blue and white floral blouse with short ruffled sleeves and black skinny pants.
+044	Solid navy blue long-sleeve shirt, black jogger pants, black beanie, black sneakers with white soles.
+045	Navy blue button-up shirt with rolled sleeves, grey shorts, white canvas slip-on shoes.
+046	Solid color sleeveless tank top, cut off sleeves, cotton material, casual style.
+047	Light grey blazer, white shorts, red bow tie, white sneakers, semi-formal style, short sleeves, solid colors.
+048	Black long-sleeve shirt with white floral and paisley pattern, cut-off sleeves, likely cotton blend material.
+049	Blue lace-trimmed bustier top, mustard-yellow button-down suede mini skirt.
+050	White lace tank top with sleeveless design, denim shorts, and brown strappy sandals.
+051	Black cold shoulder top, spaghetti straps, short sleeves cut off, solid color, lightweight fabric.
+052	Black sleeveless tank top with cut-off edges and lace trim, paired with blue jeans.
+053	Men's long-sleeve baseball tee, raglan sleeves, heather grey with light blue panels, casual cotton fabric, solid color.
+054	Men's fashion: denim jacket, red plaid shirt, olive green pants, tan boots, casual style, cotton materials, no sleeves cut off.
+055	Casual white dress with short sleeves, thigh-high side slit, made from soft cotton material, solid color design.
+056	Solid color crop top with short sleeves, light pink cotton t-shirt paired with white shorts.
+057	Solid color mustard yellow crew neck t-shirt, short sleeves, made of cotton blend fabric, no visible pattern.
+058	Short-sleeved collared shirt, light fabric, pastel camouflage pattern.
+059	Denim jacket with cut-off sleeves, white tank top, denim shorts, strappy gladiator sandals.
+060	Black sleeveless tank top with solid color and cut-off sleeves made from cotton material.
+061	Black sleeveless tank top, high neckline, solid color, pair with ripped blue jeans.
+062	Sleeveless white blouse with black trim, cut-off shoulders, smooth cotton material, solid color design.
+063	White long-sleeve cotton t-shirt, black jogger pants, white and grey sneakers, black beanie.
+064	White sleeveless tank top with thin straps, made of lightweight fabric, solid color, worn with denim jeans.
+065	White short-sleeved button-up shirt, distressed black jeans with rips, white sneakers, casual style.
+066	Floral tank top with lace detailing, sleeveless, lightweight fabric, cutout back design.
+067	Short-sleeved striped shirt, light-colored chinos, casual white sneakers, collared shirt with button-up front.
+068	Navy blue sleeveless blouse, high neckline, solid color, soft fabric.
+069	Navy blue short-sleeved shirt with bird pattern, collared, button-up style, cotton material.
+070	Grey tank top with sleeves cut off, heathered texture, possibly cotton blend, solid color, light grey pants.
+071	Blue blouse with gathered yoke, three-quarter sleeves, solid color, light fabric.
+072	Maroon button-up shirt with long sleeves, solid color, collar, front pocket, paired with black trousers.
+073	Short-sleeved white polo shirt, collared, striped trim, cotton, solid color.
+074	White sleeveless tank top with cut off sleeves, adorned with geometric embroidery at the neckline, paired with navy blue pants.
+075	Plaid shirt with rolled sleeves, distressed jeans, high-heeled sandals.
+076	Navy blue button-up shirt with long sleeves, stand collar, solid color, and likely cotton material.
+077	Short-sleeved white blouse with cut-off sleeves, made from a lightweight, solid-colored fabric.
+078	Tie-dye long-sleeve top, cut-off sleeves, cotton blend material, horizontal stripe pattern.
+079	Black dress with sheer long sleeves, cut-out at waist, solid color, form-fitting style.
+080	Cold shoulder top, long sleeves with cutouts, lace-up details, solid color, cotton blend material.
+081	Yellow spaghetti strap tank top, cut-off sleeves, lightweight fabric, solid color.
+082	Navy blue floral print romper with cut-off sleeves, lightweight fabric, and white pom-pom trim.
+083	Casual baseball t-shirt with raglan sleeves, white torso, blue sleeves, crew neck, and cotton blend material.
+084	Short-sleeved t-shirt with horizontal stripes, crew neck, light fabric, casual style.
+085	Yellow crop tank top with thin straps, solid color, light fabric; white ripped jeans with distressed details.
+086	Men's long-sleeved plaid shirt with button-up front, red and green pattern, made of cotton, casual style.
+087	Short-sleeved button-up shirt, tropical leaf pattern, lightweight fabric, collared design.
+088	Solid black top with cut-off sleeves, lightweight fabric, paired with denim shorts.
+089	Denim overalls, solid blue color, short-sleeved white cotton t-shirt underneath, casual style, no visible patterns.
+090	Long-sleeve beige blouse with solid color, lightweight material, Henley neckline, and no visible pattern.
+091	White top with lace neckline and three-quarter sleeves, paired with black leggings and brown strappy sandals.
+092	Green sleeveless top with cut-out shoulders, white pants, black ankle boots.
+093	Short-sleeved white polo shirt, solid color, collared, buttoned placket, cotton blend fabric, casual style.
+094	Long-sleeved crew neck sweater, solid navy color, cotton blend material, jogger pants, athletic style sneakers.
+095	Solid color tank top with cut-off sleeves, black leggings, knee-high boots, white fur coat.
+096	Men's long-sleeved shirt with color-block design, featuring white top, grey middle, white bottom; button-up front; paired with white shorts.
+097	Black crewneck long-sleeve t-shirt with white circular graphic, blue jogger pants, and black sneakers.
+098	Black solid color top, sheer lace sleeves, round neckline, form-fitting, mid-thigh length.
+099	Black sports bra with mesh panel, racerback design, solid color, stretchy material.
+100	Floral print tank top with spaghetti straps, cut off denim shorts, both in casual style.

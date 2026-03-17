@@ -1,0 +1,29 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# 备份文件夹（重要！）
+.git_backup/
+.git_backup
+.git_backup/*
+
+# 项目特定
+temp/
+logs/
+*.log

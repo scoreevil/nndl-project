@@ -1,0 +1,13 @@
+flask>=2.0.0
+flask-cors>=3.0.0
+opencv-python>=4.5.0
+pillow>=8.0.0
+torch>=1.8.0
+requests>=2.25.0
+openai>=1.0.0
+
+# 注意: NumPy版本兼容性
+# 代码已优化为延迟导入torch，避免NumPy版本冲突
+# 如果遇到NumPy 2.x兼容性问题，可以降级: pip install 'numpy<2.0.0'
+# 但建议保持当前NumPy版本，代码会自动处理兼容性
+

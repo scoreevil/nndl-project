@@ -1,0 +1,100 @@
+001	White long-sleeve shirt made of cotton material featuring a solid color design and a relaxed fit.
+002	White blouse with three-quarter sleeves and a pleated back panel paired with distressed denim jeans.
+003	A woman wears a long-sleeved blouse with intricate blue and white geometric patterns, paired with fitted blue jeans, showcasing a casual yet stylish look.
+004	A green varsity-style jacket with white collar and cuffs, long sleeves, and solid color material worn over gray pants.
+005	A man wears a light gray long-sleeve sweatshirt with a repeating circular pattern, paired with black pants featuring textured panels and black boots.
+006	A black short-sleeved t-shirt with floral pattern and "NY" text, paired with white pants. The shirt is made of cotton material.
+007	The woman wears an orange sleeveless tank top made of cotton with a solid color and a halter neck design, paired with distressed blue denim shorts featuring frayed edges.
+008	A floral-patterned peplum top with three-quarter sleeves, lace detailing, and a relaxed fit paired with blue jeans.
+009	White sleeveless tank top with a solid color design and a fringed hem, paired with black shorts. The top features a delicate crochet-like pattern near the bottom edge.
+010	A woman wears a short-sleeved gingham shirt tied at the waist, paired with black high-waisted pants. The shirt features a classic checkered pattern and a casual fit.
+011	A man wears a short-sleeved polo shirt with a vibrant geometric pattern in blue orange and black cotton material paired with slim black jeans and sneakers.
+012	A beige long-sleeved blouse with a mandarin collar, made of smooth fabric, featuring a slightly curved hem and cuffs rolled up, paired with black pants.
+013	Sleeveless plaid shirt made of cotton featuring a classic checkered pattern in purple and white with a button-up front and two chest pockets.
+014	The woman wears a light pink long-sleeved dress with a fitted bodice and flared skirt, paired with black ankle boots. The material appears smooth, possibly satin or silk, with a solid color design.
+015	A woman wears a pink short-sleeved top with a rounded neckline and black flared pants, paired with brown heels. The top appears to be made of a smooth material, likely cotton or polyester, in a solid color. The pants are slim
+016	A black bomber jacket with a high collar long sleeves made of smooth material, worn over a dark outfit.
+017	White short-sleeved top with small polka dot pattern, made of lightweight fabric, paired with dark blue jeans.
+018	The woman wears a gray tank top paired with distressed denim shorts. She has a black open-front cardigan with white trim on the sleeves, and completes the look with strappy sandals. The material appears casual and comfortable.
+019	A black long-sleeved button-up shirt with a mandarin collar and solid color material paired with light gray pants.
+020	A maroon tank top with a solid color pattern made of cotton, featuring a sleeveless design and a relaxed fit.
+021	White short-sleeved t-shirt with black abstract pattern cotton material black cap worn backward black pants gold watch visible on wrist.
+022	Turquoise sleeveless top with a pleated back design made of lightweight fabric paired with black leather pants.
+023	Maroon long-sleeved button-up shirt with two chest pockets made of cotton-like material paired with beige chino pants and dark brown shoes.
+024	A woman wears a patterned tank top with intricate designs and cut-off sleeves, paired with black denim shorts and strappy sandals. The top is made of cotton material.
+025	Gray sleeveless denim vest with a textured pattern and decorative stitching, paired with white bottoms.
+026	Red tank top with cut-off sleeves and a pocket; made of cotton material; solid color with red trim around the neckline.
+027	White short-sleeved t-shirt made of cotton with a solid color design and a relaxed fit.
+028	A sleeveless tank top with a geometric pattern in blue red and white cotton material paired with light-wash denim jeans.
+029	A black and white striped dress with a relaxed fit, featuring three-quarter sleeves that are rolled up, made from a smooth fabric, and reaching knee-length.
+030	Navy blue tank top with cut-off sleeves made of cotton, solid color, paired with light gray pants.
+031	White sleeveless tank top made of cotton with a solid color design and a relaxed fit.
+032	Blue sleeveless top with a loose fit and pleated back, paired with light blue denim jeans. The material appears to be lightweight and smooth.
+033	Blue sleeveless top with a textured pattern paired with a mustard yellow button-front A-line skirt.
+034	A woman wears a long-sleeved plaid shirt with a blue and white checkered pattern, made of cotton material, styled as a casual button-up top.
+035	A short-sleeved, patterned top with floral motifs, made of a soft material, paired with blue jeans. The sleeves are cut off at the upper arm, and the hem is slightly curved.
+036	Light blue sleeveless top with a relaxed fit and cut-off sleeves made of soft material paired with distressed denim shorts.
+037	A woman wears a light cream-colored V-neck blouse with lace-up front details and three-quarter sleeves, paired with distressed blue jeans and a brown wide-brimmed hat. The blouse has a soft texture and relaxed fit.
+038	White short-sleeved t-shirt made of cotton with a solid color design paired with blue jeans and a blue cap.
+039	Olive green hooded jacket with long sleeves and drawstring waist; made of cotton-like material with a solid color design.
+040	Pink lace long-sleeve top with intricate floral pattern and fitted design paired with black skirt.
+041	Black dress with three-quarter sleeves and a white floral pattern along the back, made of cotton material, knee-length, casual style.
+042	White lace cold-shoulder top with off-the-shoulder sleeves and a keyhole back, paired with dark jeans.
+043	A woman wears a short-sleeved floral-patterned top with a ruffled design paired with black high-waisted skinny jeans and beige heels. The top appears to be made of lightweight material.
+044	Navy blue long-sleeve crew neck top made of cotton material paired with black pants featuring side stripes and black sneakers.
+045	A navy blue long-sleeve button-up shirt made of cotton with a solid color pattern paired with light gray shorts and beige slip-on shoes.
+046	Gray sleeveless tank top made of cotton material featuring a solid color design with a casual and minimalist style.
+047	Light gray suit with short shorts and jacket featuring a two-button design; white shirt and red bow tie; sleeveless cut off style; cotton material with subtle pattern.
+048	Black long-sleeve sweater with intricate white floral pattern on chest and shoulders made of cotton material.
+049	A blue sequined bustier top with thin straps and a mustard yellow button-down skirt made of suede-like material. The top is sleeveless and the skirt is short.
+050	A sleeveless tank top with a delicate lace pattern and sheer fabric, paired with denim shorts. The top features intricate embroidery and a lightweight material, creating a casual yet elegant look.
+051	Black cold-shoulder top with thin straps and cut-off sleeves made of smooth fabric paired with blue denim jeans.
+052	Black sleeveless tank top with lace trim at bottom made of cotton, paired with blue jeans and a wide-brimmed black hat.
+053	Gray and blue raglan sleeve t-shirt with solid color pattern made of cotton material paired with light blue jeans.
+054	Denim jacket with button closure worn over a red and black plaid shirt; olive green pants with straight fit; tan boots with rugged design.
+055	White sleeveless dress made of cotton material featuring a high slit on the side and a relaxed fit.
+056	Light pink short-sleeved top with a simple design made of soft material paired with white shorts.
+057	A yellow short-sleeved t-shirt with a solid color, made of cotton, paired with dark pants.
+058	Turquoise short-sleeved button-down shirt with a pink whale pattern, made of cotton material, featuring a relaxed fit.
+059	The woman wears a loose-fitting blue kimono-style top with floral patterns and wide sleeves over a white tank top and shorts, paired with strappy sandals.
+060	Black sleeveless tank top made of cotton material with a solid color design and a relaxed fit.
+061	Black sleeveless tank top made of smooth fabric with a solid color design paired with distressed blue denim jeans.
+062	White sleeveless top with cut-off shoulders and black trim made of smooth fabric; paired with black shorts.
+063	White long-sleeve cotton top paired with black solid color jogger pants and white sneakers. The outfit features a casual style with a relaxed fit.
+064	White lace tank top with thin straps and delicate floral pattern paired with blue denim jeans.
+065	White short-sleeved button-up shirt with a relaxed fit paired with black ripped jeans and white sneakers. The shirt appears to be made of cotton with a solid color design.
+066	Floral pattern tank top with lace detailing on the back, sleeveless design, lightweight material, casual style.
+067	A short-sleeved button-up shirt with horizontal blue and white stripes, paired with light beige pants and white sneakers. The shirt appears to be made of cotton material.
+068	Navy sleeveless tank top with a solid color design and a slightly loose fit, paired with white pants.
+069	Navy blue short-sleeved button-up shirt with white bird pattern cotton material and a chest pocket.
+070	Dark gray sleeveless tank top made of cotton with a solid color design paired with light gray jeans.
+071	Blue sleeveless top with a gathered front and three-quarter sleeves paired with light blue denim jeans. The top has a solid color and appears to be made of a smooth fabric.
+072	Maroon long-sleeved button-up shirt with black accents on collar and cuffs, solid color, cotton-like material, slim fit.
+073	White short-sleeved polo shirt with solid color and ribbed collar; black pants with red and white striped waistband; visible tattoo on left arm.
+074	White sleeveless tank top with a layered design and decorative embellished neckline paired with dark blue jeans.
+075	The woman wears a black and white plaid button-up shirt with rolled-up sleeves, paired with light blue distressed skinny jeans and brown strappy sandals. The shirt appears to be made of cotton material.
+076	Navy blue long-sleeved shirt with mandarin collar, solid color, made of cotton-like material, fitted style.
+077	White sleeveless top with a loose fit, made of cotton-like material, featuring a solid color design and a relaxed style.
+078	White tie-dye patterned loose-fitting dress with wide sleeves and a relaxed fit paired with rolled-up blue jeans and black sandals.
+079	Black sheer long-sleeve crop top with solid color and mesh material paired with black pants.
+080	Off-shoulder beige blouse with bell sleeves and decorative stitching, paired with blue jeans.
+081	Light green sleeveless tank top made of soft material with a solid color and thin straps paired with distressed denim shorts.
+082	Navy blue tank top and shorts set with floral pattern white tassels on hem cotton material sleeveless casual summer style.
+083	White and blue raglan sleeve shirt made of cotton with a solid color pattern paired with dark jeans and white sneakers.
+084	Gray short-sleeved t-shirt with white horizontal stripe across the chest and matching sleeve cuffs; solid color design, casual style, likely cotton material.
+085	Lime green tank top with thin straps and a solid color, made of lightweight fabric paired with white distressed jeans.
+086	A red and black plaid long-sleeve shirt made of cotton with a button-up front and two chest pockets, paired with light blue denim jeans.
+087	White short-sleeved shirt with blue and black tropical leaf pattern made of cotton material featuring a button-up front and casual style.
+088	Black sleeveless top with a loose fit and rounded neckline paired with light blue denim shorts featuring a frayed hem. The fabric appears to be smooth and lightweight.
+089	The individual is wearing a light gray short-sleeved t-shirt made of cotton paired with blue denim overalls featuring adjustable straps and front pockets. The overalls have a classic design with visible stitching.
+090	Light beige long-sleeved cardigan with a V-neck, made of soft material, paired with black pants, featuring a relaxed and casual style.
+091	White blouse with lace detailing at neckline and hem sleeveless cut-off three-quarter sleeves solid color black skinny pants flat sandals on white background.
+092	A woman wears a teal sleeveless tank top with intricate embroidery on the shoulders and white leggings paired with black ankle boots. The tank top has a solid color design and a loose fit.
+093	White short-sleeved button-up blouse with a solid color, made of cotton-like material, paired with blue denim jeans.
+094	Navy blue long-sleeve crew neck top made of cotton material paired with slim-fit dark jeans and black shoes.
+095	The woman wears a sleeveless light pink tank top made of soft material, paired with black high-waisted skinny jeans. She has on black knee-high boots and holds a white fluffy coat in her hand. The outfit is casual yet stylish.
+096	White and gray color-blocked button-up shirt with long sleeves, solid cotton material, paired with white shorts.
+097	A black long-sleeved sweatshirt with a white oval "yes" logo paired with blue slim-fit pants and black sneakers, featuring a casual solid color style.
+098	Black sheer blouse with floral lace details on sleeves and neckline paired with blue jeans, featuring a casual yet elegant style.
+099	Black mesh bralette with halter straps and solid color design, paired with white high-waisted bottoms.
+100	A sleeveless tank top with a floral pattern in red and blue made of cotton paired with high-waisted distressed denim shorts.
